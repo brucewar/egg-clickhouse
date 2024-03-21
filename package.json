@@ -1,0 +1,55 @@
+{
+  "name": "egg-clickhouse",
+  "version": "1.0.0",
+  "description": "ClickHouse client plugin for egg.js",
+  "eggPlugin": {
+    "name": "ClickHouse"
+  },
+  "keywords": [
+    "egg",
+    "eggPlugin",
+    "egg-plugin"
+  ],
+  "dependencies": {
+    "@clickhouse/client": "0.0.16"
+  },
+  "devDependencies": {
+    "egg": "^3",
+    "egg-bin": "^5",
+    "egg-ci": "^2",
+    "egg-mock": "^5",
+    "eslint": "^8",
+    "eslint-config-egg": "^12"
+  },
+  "engines": {
+    "node": ">=6.0.0"
+  },
+  "scripts": {
+    "test": "npm run lint -- --fix && npm run test-local",
+    "test-local": "egg-bin test",
+    "cov": "egg-bin cov",
+    "lint": "eslint .",
+    "ci": "npm run lint && npm run cov"
+  },
+  "files": [
+    "app.js",
+    "agent.js",
+    "config",
+    "app",
+    "lib",
+    "index.d.ts"
+  ],
+  "ci": {
+    "version": "16, 18"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/brucewar/egg-clickhouse.git"
+  },
+  "bugs": {
+    "url": "https://github.com/brucewar/egg-clickhouse/issues"
+  },
+  "homepage": "https://github.com/brucewar/egg-clickhouse#readme",
+  "author": "brucewar@163.com",
+  "license": "MIT"
+}
